@@ -171,3 +171,15 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDTree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Open NERDTree only no argument is after vim
+" autocmd vimenter * if !argc() | NERDTree | endi
+" Open NERDTree in anytime
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+" Close the NERDTree panel automatically
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
