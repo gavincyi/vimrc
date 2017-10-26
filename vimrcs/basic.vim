@@ -344,6 +344,9 @@ map <leader>pp :setlocal paste!<cr>
 " Allow mouse in vim
 set mouse=r
 
+" Set paste mode
+:set pastetoggle=<F3>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
