@@ -131,6 +131,9 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" Allow mouse in vim
+set mouse=a
+
 " Properly disable sound on errors on MacVim
 if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
@@ -341,11 +344,9 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
-" Allow mouse in vim
-set mouse=a
-
 " Toggle mouse mode
-map <leader>mm: exec &mouse!=""? "set mouse=" : "set mouse=a"<cr>
+map <leader>ma :setlocal mouse=a<cr>
+map <leader>mr :setlocal mouse=r<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
